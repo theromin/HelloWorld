@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <math.h>
+int main ()
+{
+	double cs,xs,cc;//车速，限速，超出 
+	scanf("%lf%lf",&cs,&xs);
+	cc=(cs-xs)/xs;
+	if(cc<0.1) printf("OK");
+	else if(cc<0.5) printf("Exceed %.0f%%. Ticket 200",cc*100);
+	else printf("Exceed %.0f%%. License Revoked",cc*100);
+  return 0;
+}
