@@ -1,0 +1,14 @@
+int narcissistic( int number )
+{
+	int t=number,i=0,sum=0;
+	for(;t>0;i++)	t/=10;
+	int a=i,b;
+	t=number;
+	for(;i>0;i--){
+		b=t%10;
+		sum+=pow(b,a);
+		t=t/10;
+	}
+	if(sum==number)	return 1;
+	else return 0;
+} 
