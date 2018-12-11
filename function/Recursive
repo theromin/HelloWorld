@@ -1,7 +1,0 @@
-double fn(double x, int n)
-{
-	double result;
-	if (n == 0 || n == 1) result = x;
-	else result = x - x * fn(x, n - 1);
-	return result;
-}
