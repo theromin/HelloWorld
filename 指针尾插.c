@@ -19,13 +19,17 @@ typedef struct preList
 	struct preList *next;
 }List;
 
-void CreateList(List **head);
+void CreateList(List **head);//传地址
+//List *CreateList();//返回头指针
 void read(List *head);
 
 int main()
 {
+	//List *head=NULL;
 	List *p=NULL;
+	//head=CreateList();
 	CreateList(&p);
+	//read(head);
 	read(p);
 	system("pause");
 	return 0;
@@ -35,17 +39,22 @@ void CreateList(List **head)
 {
 	int num;
 	List *tail, *p;
+	//List *head;
+	//head=tail=NULL;
 	while (~scanf("%d", &num))
 	{
 		p = (List*)malloc(sizeof(List));
 		p->num = num;
 		p->next = NULL;
+		//if(head==NULL)
+		//	head=p;
 		if (*head == NULL)
-			*head = p;
+			*head = p;		
 		else
 			tail->next = p;
 		tail = p;
 	}
+	//return head;
 }
 
 void read(List *head)
