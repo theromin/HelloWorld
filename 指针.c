@@ -59,7 +59,7 @@ List *CreateList()//返回头指针
 */
 
 /*
-List *CreateList()//尾插法
+List *CreateList()//头插法
 {
 	int num;
 	List *head, *p;
