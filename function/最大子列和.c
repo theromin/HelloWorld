@@ -7,7 +7,7 @@ int MAxSubseqSum(int a[], int N)
   for(i=0;i<N;i++)
   {
     ThisSum+=a[i];
-    if(MaxSum>ThisSum)
+    if(MaxSum<ThisSum)
       MaxSum = ThisSum;
     else if(ThisSum<0)
       ThisSum = 0;
